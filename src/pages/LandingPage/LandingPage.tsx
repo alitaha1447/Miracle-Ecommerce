@@ -99,43 +99,22 @@ const LandingPage: React.FC = () => {
             </header>
             {/* Content */}
             <div className="w-full px-3 py-2">
-                <div className="bg-white">
-                    <div className="flex items-center justify-center gap-5 overflow-x-auto no-scrollbar">
-                        <div className="flex flex-col items-center py-2">
-                            <img src={Product1} alt="product 1" className="w-[64px] h-[64px]" />
-                            <span className="mt-1 text-sm text-black">Home & Furniture</span>
-                        </div>
-                        <div className="flex flex-col items-center ">
-                            <img src={Product1} alt="product 1" className="w-[64px] h-[64px]" />
-                            <span className="mt-1 text-sm text-black">Home & Furniture</span>
-                        </div>
-                        <div className="flex flex-col items-center ">
-                            <img src={Product1} alt="product 1" className="w-[64px] h-[64px]" />
-                            <span className="mt-1 text-sm text-black">Home & Furniture</span>
-                        </div>
-                        <div className="flex flex-col items-center ">
-                            <img src={Product1} alt="product 1" className="w-[64px] h-[64px]" />
-                            <span className="mt-1 text-sm text-black">Home & Furniture</span>
-                        </div>
-                        <div className="flex flex-col items-center ">
-                            <img src={Product1} alt="product 1" className="w-[64px] h-[64px]" />
-                            <span className="mt-1 text-sm text-black">Home & Furniture</span>
-                        </div>
-                        <div className="flex flex-col items-center ">
-                            <img src={Product1} alt="product 1" className="w-[64px] h-[64px]" />
-                            <span className="mt-1 text-sm text-black">Home & Furniture</span>
-                        </div>
-                        <div className="flex flex-col items-center ">
-                            <img src={Product1} alt="product 1" className="w-[64px] h-[64px]" />
-                            <span className="mt-1 text-sm text-black">Home & Furniture</span>
-                        </div>
-                        <div className="flex flex-col items-center ">
-                            <img src={Product1} alt="product 1" className="w-[64px] h-[64px]" />
-                            <span className="mt-1 text-sm text-black">Home & Furniture</span>
-                        </div>
-                        <div className="flex flex-col items-center ">
-                            <img src={Product1} alt="product 1" className="w-[64px] h-[64px]" />
-                            <span className="mt-1 text-sm text-black">Home & Furniture</span>
+                <div className="bg-white px-5 py-5">
+                    <div className="w-full overflow-x-auto custom-scrollbar">
+                        <div className="flex gap-2 w-max mx-auto">
+                            {Array.from({ length: 8 }).map((_, i) => (
+                                <div
+                                    key={i}
+                                    className="min-w-[100px] p-4 cursor-pointer"
+                                >
+                                    <div className="flex flex-col items-center justify-center text-white">
+                                        <img src={Product1} alt="product 1" />
+                                        <span className="mt-1 text-sm text-center text-black">
+                                            Home & Furniture
+                                        </span>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -178,7 +157,7 @@ const LandingPage: React.FC = () => {
                                 >
                                     {/* Image / Badge / Wish */}
                                     <div className="relative">
-                                        <div className="h-40 w-full bg-gray-50 flex items-center justify-center overflow-hidden">
+                                        <div className="h-40 w-full bg-gray-50 flex items-center justify-center">
                                             <img
                                                 src={p.image}
                                                 alt={p.title}

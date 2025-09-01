@@ -1,0 +1,33 @@
+/* .scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+} */
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;   /* small width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;  /* light gray track */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2a55e5, #2a55e5); /* purple → blue gradient */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #2a55e5, #2a55e5);
+}
+
+/* Firefox support */
+.custom-scrollbar {
+  scrollbar-width: thin;               /* makes it small */
+  scrollbar-color: #4f46e5 #f1f1f1;   /* thumb color + track color */
+}
