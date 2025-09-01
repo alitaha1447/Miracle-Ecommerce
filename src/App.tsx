@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router";
 import SignIn from "./pages/AuthPages/SignIn";
 import SignUp from "./pages/AuthPages/SignUp";
 import NotFound from "./pages/OtherPage/NotFound";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import DetailPage from "./pages/DetailPage/DetailPage";
 import UserProfiles from "./pages/UserProfiles";
 import Videos from "./pages/UiElements/Videos";
 import Images from "./pages/UiElements/Images";
@@ -53,6 +55,9 @@ export default function App() {
             <Route path="/bar-chart" element={<BarChart />} />
           </Route>
 
+          {/* landing Page */}
+          <Route path="/landing-page" element={<LandingPage />} />
+          <Route path="/product/:id" element={<DetailPage />} />
           {/* Auth Layout */}
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
