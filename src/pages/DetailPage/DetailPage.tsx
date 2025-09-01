@@ -5,11 +5,11 @@ import React, { useState } from "react";
 import { useParams } from "react-router";
 import {
     FiStar,
-    FiHeart,
-    FiTruck,
+    // FiHeart,
+    // FiTruck,
     FiTag,
     FiChevronDown,
-    FiMapPin,
+    // FiMapPin,
 } from "react-icons/fi";
 
 // TODO: adjust these paths to your files
@@ -20,7 +20,7 @@ const gallery = [Product1, Product1, Product1, Product1];
 const DetailPage: React.FC = () => {
     const [active, setActive] = useState(0);
     const [size, setSize] = useState<string | null>(null);
-    const [pincode, setPincode] = useState("");
+    // const [pincode, setPincode] = useState("");
 
     const price = 1299;
     const mrp = 1999;
