@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { FiShoppingCart, FiSearch, FiMenu } from "react-icons/fi";
-import { Link, } from "react-router";
+// import { Link, } from "react-router";
 // import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { FiHeart, FiStar } from "react-icons/fi";
+// import { FiHeart, FiStar } from "react-icons/fi";
 import { MdStorefront } from "react-icons/md";
-import Logo from "../../assests/images/logo/logo.png";
+// import Logo from "../../assests/images/logo/logo.png";
+import Logo from '../../assests/images/logo/MiracleInfoserv.png'
 import Product1 from "../../assests/images/products/img1.png";
 import Banner1 from "../../assests/images/banner/banner1.png";
 import Banner2 from "../../assests/images/banner/banner2.png";
@@ -150,9 +151,9 @@ const LandingPage: React.FC = () => {
 
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
                             {products.map((p) => (
-                                <Link
+                                <div
                                     key={p.id}
-                                    to={`/product/${p.id}`}
+                                    // to={`/product/${p.id}`}
                                     className="rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition"
                                 >
                                     {/* Image / Badge / Wish */}
@@ -166,19 +167,19 @@ const LandingPage: React.FC = () => {
                                             />
                                         </div>
 
-                                        {p.badge && (
+                                        {/* {p.badge && (
                                             <span className="absolute left-2 top-2 rounded-md bg-orange-100 text-orange-700 text-xs font-medium px-2 py-0.5">
                                                 {p.badge}
                                             </span>
-                                        )}
+                                        )} */}
 
-                                        <button
+                                        {/* <button
                                             type="button"
                                             className="absolute right-2 top-2 rounded-full p-2 bg-white/90 text-gray-600 hover:text-red-500 shadow-sm"
                                             aria-label="Add to wishlist"
                                         >
                                             <FiHeart />
-                                        </button>
+                                        </button> */}
                                     </div>
 
                                     {/* Content */}
@@ -186,22 +187,34 @@ const LandingPage: React.FC = () => {
                                         <h3 className="text-sm font-medium text-gray-800 overflow-hidden text-ellipsis whitespace-nowrap">
                                             {p.title}
                                         </h3>
+                                        <p className="mt-1 text-sm text-gray-600 line-clamp-2">
+                                            High-quality headphones with noise cancellation and immersive sound.
+                                        </p>
+                                        <div className="mt-3 flex items-center gap-2">
+                                            <span className="inline-flex items-center rounded-full bg-gray-100 text-gray-700 px-2.5 py-0.5 text-xs font-medium">
+                                                <strong>Condition:</strong> Brand New
+                                            </span>
+                                            <span className="inline-flex items-center rounded-full bg-indigo-50 text-indigo-700 px-2 py-0.5 text-xs font-medium">
+                                                Token: 5
+                                            </span>
+                                        </div>
 
-                                        <div className="mt-1 flex items-center gap-2">
+
+                                        {/* <div className="mt-1 flex items-center gap-2">
                                             <span className="inline-flex items-center rounded px-1.5 py-0.5 text-xs bg-green-100 text-green-700">
                                                 {p.rating}
                                                 <FiStar className="ml-1" />
                                             </span>
                                             <span className="text-xs text-gray-500">({p.reviews})</span>
-                                        </div>
+                                        </div> */}
 
-                                        <div className="mt-2 flex items-baseline gap-2">
+                                        {/* <div className="mt-2 flex items-baseline gap-2">
                                             <span className="text-lg font-semibold text-gray-900">₹{p.price}</span>
                                             <span className="text-sm text-gray-500 line-through">₹{p.mrp}</span>
                                             <span className="text-sm text-green-600 font-medium">
                                                 {Math.round((1 - p.price / p.mrp) * 100)}% off
                                             </span>
-                                        </div>
+                                        </div> */}
 
                                         <button
                                             className="mt-3 w-full rounded-md bg-brand-500 hover:bg-brand-600 text-white text-sm py-2 transition"
@@ -209,7 +222,7 @@ const LandingPage: React.FC = () => {
                                             Add to Cart
                                         </button>
                                     </div>
-                                </Link>
+                                </div>
                             ))}
                         </div>
                     </div>
